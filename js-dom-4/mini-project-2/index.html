@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="section-form">
+            <h1>Enter Data</h1>
+            <form onsubmit="SubmitFunction(event)">
+                <section class="section-form-input">
+                    <label for="input_name">Name:</label>
+                    <input type="text" id="input_name">
+                </section>
+                <section class="section-form-input">
+                    <label for="input_age">Age:</label>
+                    <input type="text" id="input_age">
+                </section>
+                <section class="section-form-input">
+                    <label for="input_weight">Weight:</label>
+                    <input type="text" id="input_weight">
+                </section>
+                <section class="section-form-input">
+                    <label for="input_running">Current Running (Minutes):</label>
+                    <input type="text" id="input_running">
+                </section>
+                <button type="submit">Add Data</button>
+            </form>
+        </section>
+        <section class="section-table">
+            <h2 class="section-table-topic">Entered Data</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Weight</th>
+                        <th>Current Running (Minutes)</th>
+                        <th>Good Running</th>
+                    </tr>
+                </thead>
+                <tbody id="section-table-tbody">
+                    <!-- <tr>
+                        <td id="display_name" class="display">name</td>
+                        <td id="display_age" class="display">age</td>
+                        <td id="display_weight" class="display">weight</td>
+                        <td id="display_current" class="display">current running</td>
+                        <td id="display_goodrunning" class="display">good running</td>
+                    </tr> -->
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
