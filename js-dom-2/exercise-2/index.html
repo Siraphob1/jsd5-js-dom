@@ -8,8 +8,9 @@
   <body>
     <input id="fullname" type="text" placeholder="Full Name" />
     <input id="nickname" type="text" placeholder="NickName" />
+    
     <button onClick="createHTML()">Submit</button>
-    <ul></ul>
+    <ul id="ul"></ul>
   </body>
   <script type="text/javascript">
     const createHTML = () => {
@@ -17,8 +18,11 @@
       const nickname = document.querySelector("#nickname");
 
       // select ul first here
-      const dive = document.querySelector("....");
-      dive.innerHTML = // code here
+      const dive = document.querySelector("#ul");
+      dive.innerHTML = `
+      <h1>${fullname.value}</h1>
+      <h1>${nickname.value}</h1>
+      `
     };
   </script>
 </html>

@@ -24,14 +24,17 @@
     <div id="nickname-display"></div>
 
     <script>
-      const textDiv = document.querySelector("#textDiv");
+      const fullname = document.querySelector("#fullname-display");
+      const nickname = document.querySelector("#nickname-display");
 
       function fullNameType(event) {
         // write code here
+        fullname.innerText = event.target.value
       }
 
       function nickNameType(event) {
         // write code here
+        nickname.innerText = event.target.value
       }
     </script>
   </body>

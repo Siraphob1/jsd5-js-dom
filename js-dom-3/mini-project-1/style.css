@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -26,4 +26,56 @@ body {
 .info {
   margin-top: 20px;
   text-align: center;
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --Border: 1px solid black
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+main{
+ /* border: var(--Border); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card{
+  /* border: var(--Border); */
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px 1px #8585856c,-10px -10px 20px 1px #8585856c;;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-div{
+  width: 50%;
+}
+.card-img{
+  width: 100%;
+  border-radius: 50%;
+  border: var(--Border);
 }

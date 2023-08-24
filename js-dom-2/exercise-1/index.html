@@ -8,11 +8,20 @@
   <body>
     <input id="fullname" type="text" placeholder="Full Name" />
     <input id="nickname" type="text" placeholder="NickName" />
-    <button onClick="// your function when click!">Submit</button>
+    <button onClick="SetH1()">Submit</button>
     <h1 id="h1e">Welcome Kanin James</h1>
   </body>
   <script type="text/javascript">
+    const input_fullname = document.getElementById('fullname')
+    const input_nickname = document.getElementById('nickname')
+    const id_h1e= document.getElementById('h1e')
     // write your own function here
+    function SetH1(){
+      id_h1e.innerText = `Welcome 
+      fullname:${input_fullname.value}  
+      nickname:${input_nickname.value}`
+    }
     // write code here
+    
   </script>
 </html>
