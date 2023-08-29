@@ -10,6 +10,9 @@ let display_age = document.querySelector('#display_age');
 let display_weight = document.querySelector('#display_weight');
 let display_current = document.querySelector('#display_current');
 let display_goodrunning = document.querySelector('#display_goodrunning');
+input_age.textContent
+
+
 
 
 let SubmitFunction = (event) =>{
