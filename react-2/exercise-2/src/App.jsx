@@ -12,86 +12,87 @@ function App() {
 
 const PostContainer = () => {
   return (
-    <div class="post-container">
-      <div class="post-header">
-        <img class="post-avatar" src="avatar.jpg" alt="Your Avatar" />
-        <div class="post-author">You</div>
-      </div>
-      <div class="post-content">
+    <div className="post-container">
+      <section className="post-header">
+        <img className="post-avatar" src="avatar.jpg" alt="Your Avatar" />
+        <div className="post-author">You</div>
+      </section>
+      <section className="post-content">
         <textarea
-          class="post-input"
+          className="post-input"
           placeholder="What's on your mind?"
         ></textarea>
-      </div>
-      <div class="post-actions">
-        <button class="post-button">Post</button>
-      </div>
+      </section>
+      <section className="post-actions">
+        <button className="post-button">Post</button>
+      </section>
     </div>
   );
 };
 
 const FeedSection = () => {
   return (
-    <div class="feed">
-      <div class="post">
-        <div class="post-header">
+    <div className="feed">
+      <section className="post">
+        <div className="post-header">
           <img
-            class="post-avatar"
+            className="post-avatar"
             src="https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png"
             alt="User 1"
           />
           <div>
-            <div class="post-author">User 1</div>
-            <div class="post-time">2 hours ago</div>
+            <div className="post-author">User 1</div>
+            <div className="post-time">2 hours ago</div>
           </div>
         </div>
-        <div class="post-content">This is my first post! 🎉</div>
+        <div className="post-content">This is my first post! 🎉</div>
         <img
-          class="post-image"
+          className="post-image"
           src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
           alt="Post 1"
         />
-      </div>
+      </section>
 
-      <div class="post">
-        <div class="post-header">
+      <section className="post">
+        <div className="post-header">
           <img
-            class="post-avatar"
+            className="post-avatar"
             src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
             alt="User 2"
           />
           <div>
-            <div class="post-author">User 2</div>
-            <div class="post-time">4 hours ago</div>
+            <div className="post-author">User 2</div>
+            <div className="post-time">4 hours ago</div>
           </div>
         </div>
-        <div class="post-content">Enjoying a beautiful day outdoors! ☀️</div>
+        <div className="post-content">Enjoying a beautiful day outdoors! ☀️</div>
         <img
-          class="post-image"
+          className="post-image"
           src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
           alt="Post 2"
         />
-      </div>
+      </section>      
 
-      <div class="post">
-        <div class="post-header">
+      <section className="post">
+        <div className="post-header">
           <img
-            class="post-avatar"
+            className="post-avatar"
             src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
             alt="User 3"
           />
           <div>
-            <div class="post-author">User 3</div>
-            <div class="post-time">1 day ago</div>
+            <div className="post-author">User 3</div>
+            <div className="post-time">1 day ago</div>
           </div>
         </div>
-        <div class="post-content">Exploring new places and cultures. 🌍✈️</div>
+        <div className="post-content">Exploring new places and cultures. 🌍✈️</div>
         <img
-          class="post-image"
+          className="post-image"
           src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
           alt="Post 3"
         />
-      </div>
+      </section>
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./App.css";
 
 function App() {
@@ -30,27 +31,71 @@ function App() {
     <div id="app">
       <h1>Enter Data</h1>
       <PostContainer />
-      <FeedSection />
+      <FeedSection data={posts}/>
     </div>
   );
 }
 
 const PostContainer = () => {
   return (
-    
+    <div className="post-container">
+      <div className="post-header">
+        <img className="post-avatar" src="avatar.jpg" alt="Your Avatar" />
+        <div className="post-author">You</div>
+      </div>
+      <div className="post-content">
+        <textarea
+          className="post-input"
+          placeholder="What's on your mind?"
+        ></textarea>
+      </div>
+      <div className="post-actions">
+        <button className="post-button">Post</button>
+      </div>
+    </div>
   );
 };
 
-const FeedSection = () => {
+const FeedSection = (props) => {
+  const posts = props.data
   return (
-    
+    <div className="feed">
+      {/* <Post data={posts[0]}/>
+      <Post data={posts[1]}/>
+      <Post data={posts[2]}/> */}
+      {posts.map((element) => {
+        return(
+          <Post key={element.author} data={element}/>
+        )
+      })}
+    </div>
   );
 };
 
-const Post = () => {
+const Post = (props) => {
+  const post = props.data
   return (
-
-  )
+    <div className="post">
+    <div className="post-header">
+      <img
+        className="post-avatar"
+        src={post.avatar}
+        alt="User 1"
+      />
+      <div>
+        <div className="post-author">{post.author}</div>
+        <div className="post-time">{post.time}</div>
+      </div>
+    </div>
+    <div className="post-content">{post.content}</div>
+    <img
+      className="post-image"
+      src={post.image}
+      alt="Post 1"
+    />
+  </div>
+  );
 }
-
+;
 export default App;
+

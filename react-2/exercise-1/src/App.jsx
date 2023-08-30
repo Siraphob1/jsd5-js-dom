@@ -62,7 +62,7 @@ const RunningForm = () => {
   );
 };
 
-const TableDisplay = () => {
+const TableDisplay = ({data}) => {
   return (
     <>
       <h1>Entered Data</h1>
@@ -76,15 +76,28 @@ const TableDisplay = () => {
             <th>Good Running</th>
           </tr>
         </thead>
-        <TableBody />
+        <TableBody data={data}/>
       </table>
     </>
   );
 };
 
-const TableBody = () => {
+const TableBody = ({data}) => {
   return (
     // code here
+    <tbody>
+          {data.map((member) => {
+            return (
+              <tr key={member.name} className="bg-blue">
+                <td className="bg-yellow">{member.name}</td>
+                <td>{member.age}</td>
+                <td>{member.weight}</td>
+                <td>{member.running}</td>
+                <td>{member.status}</td>
+              </tr>
+            );
+          })}
+        </tbody>
   )
 }
 

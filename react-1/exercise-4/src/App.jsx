@@ -1,12 +1,17 @@
-import React from "react";
-import "./App.css";
+
+import HeaderComponent from "./component/HeaderComponent";
+import MainComponent from "./component/MainComponent";
+
+
 
 function App() {
   return (
     <div id="app">
       <h1>Enter Data</h1>
-      <RunningForm />
-      <TableDisplay />
+      
+        <HeaderComponent/>
+        <MainComponent/>
+  
     </div>
   );
 }

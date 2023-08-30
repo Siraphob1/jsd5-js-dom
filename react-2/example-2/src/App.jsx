@@ -2,14 +2,12 @@ import "./App.css";
 
 function App() {
   const members = [
-    {
-      name: "Mock J",
-      age: 99,
-      weight: 66,
-      running: 40,
-      status: "Balance",
-    },
+    {name: "Mock J", age: 99, weight: 66, running: 40, status: "Balance"},
+    {name: "Mock B", age: 20, weight: 50, running: 100, status: "Excellent"},
+    {name: "Mock C", age: 40, weight: 70, running: 200, status: "Excellent++"},
   ];
+
+
   return (
     <div id="app">
       <h1>Enter Data</h1>
