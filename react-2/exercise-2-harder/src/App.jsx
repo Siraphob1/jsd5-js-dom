@@ -59,10 +59,7 @@ const PostContainer = () => {
 const FeedSection = (props) => {
   const posts = props.data
   return (
-    <div className="feed">
-      {/* <Post data={posts[0]}/>
-      <Post data={posts[1]}/>
-      <Post data={posts[2]}/> */}
+    <div className="feed">    
       {posts.map((element) => {
         return(
           <Post key={element.author} data={element}/>
