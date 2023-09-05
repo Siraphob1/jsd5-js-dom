@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
     // adding state here.
@@ -6,6 +6,7 @@ function App() {
   let [clickage , setClickge] = useState(false)
   let [clickpicture , setClickpicture] = useState(false)
 
+ 
 
   const handleClick = (value) => {
     // code here.

@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
-  const [rate, setRate] = useState(0);
-  const [exchange, setExchange] = useState(1);
+  const [username , setUsername] = useState('')
+  const [userage , setUserage] = useState(0)
+  const [userposition , setUserposition] = useState('position')
 
-  const syncRate = () => {
-    setRate(30);
-  };
 
-  const handleExchangeChange = (event) => {
-    const newExchange = event.target.value;
-    setExchange(newExchange);
-  };
+  useEffect(()=>{
+   setUsername('James')
+   setUserage(99)
+   setUserposition('Instructor')
+  },[])
+
+
 
   return (
     <div>
-      <h1>Current Rate: {rate}</h1>
-      <button onClick={syncRate}>Sync Rate</button>
-      <input type="number" value={exchange} onChange={handleExchangeChange} />
-      <h2>Calculated Exchange: {exchange * rate}</h2>
+      <h1>Your information is</h1>
+      <h3>{username}</h3>
+      <h3>{userage}</h3>
+      <h3>{userposition}</h3>   
     </div>
   );
 };
