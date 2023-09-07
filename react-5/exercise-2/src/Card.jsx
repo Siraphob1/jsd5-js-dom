@@ -1,4 +1,4 @@
-const Card = ({ age, name, id, status, weight }) => {
+const Card = ({ age, name, id, status, weight ,deleteHandler}) => {
   return (
     <div className="card">
       <div className="label">Age: {age}</div>
@@ -10,6 +10,8 @@ const Card = ({ age, name, id, status, weight }) => {
       <div className="label">Status: {status}</div>
 
       <div className="label">Weight: {weight}</div>
+      <button type="button">Edit</button>
+      <button  onClick={()=> deleteHandler(id)}>Delete</button>
     </div>
   );
 };

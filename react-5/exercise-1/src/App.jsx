@@ -9,19 +9,23 @@ const App = () => {
   const [singleMember, setSingleMember] = useState([]);
 
   useEffect(() => {
-    const getData ______fill the blank here_______ {
-      const response = await axios();
+    const getData = async () => {
+      const response = await axios.get(`https://jsd5-mock-backend.onrender.com/members`);
       // set member here
+      setMembers(response.data)
     };
 
+    
     getData();
   }, []);
 
   const getDataById = async (id) => {
     // call axios here
-
+    const response = await axios.get(`https://jsd5-mock-backend.onrender.com/members/${id}`);
+      
     if (response.status === 200 && response.data) {
       // set data here
+      setSingleMember(response.data)
     }
   };
 
@@ -47,15 +51,9 @@ const App = () => {
             Mock Name
           </option>
           <option value="66a3f853-5c09-4412-a380-3cc1ebf08c9c">John Doe</option>
-          <option value="64715e05-b45b-4aba-b6d2-d7a4f61ccf0a">
-            Alice Smith
-          </option>
-          <option value="61ec7ef2-f2e5-460c-bfd0-c060a99d0f50">
-            Jane Johnson
-          </option>
-          <option value="6b72fbe1-5c72-42bb-a25f-8d00cef7e88a">
-            Bob Brown
-          </option>
+          <option value="64715e05-b45b-4aba-b6d2-d7a4f61ccf0a">Alice Smith</option>
+          <option value="61ec7ef2-f2e5-460c-bfd0-c060a99d0f50">Jane Johnson</option>
+          <option value="6b72fbe1-5c72-42bb-a25f-8d00cef7e88a">Bob Brown</option>
         </select>
         <Card
           id={singleMember.id}
