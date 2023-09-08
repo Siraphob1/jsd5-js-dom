@@ -6,7 +6,7 @@ import "./App.css";
 const App = () => {
   const [members, setMembers] = useState([]);
 
-  const [singleMember, setSingleMember] = useState([]);
+  const [singleMember, setSingleMember] = useState({});
 
   useEffect(() => {
     const getData = async () => {
@@ -33,7 +33,6 @@ const App = () => {
     <div className="container">
       <h1>All Data</h1>
       <div>
-        
         {members.map((member) => (
           <Card
             age={member.age}
